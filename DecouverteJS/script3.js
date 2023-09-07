@@ -59,3 +59,22 @@ while(z<7){
     console.log(Math.random());
     z++;
 }
+
+//Utilisation du switch
+let a = Number(prompt("entrez un chiffre"));
+switch (a) {
+    case 0:
+        console.log('a est égal à 0');
+        break;
+    case 1:
+        console.log('a est égal à 1');
+        break;
+    case 2:
+        console.log('a est égal à 2');
+        break;
+    case 3:
+        console.log('a est égal à 3');
+        break;
+    default:
+        console.log('a est égal à autre chose');
+}
