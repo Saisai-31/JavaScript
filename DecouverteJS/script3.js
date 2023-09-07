@@ -78,3 +78,7 @@ switch (a) {
     default:
         console.log('a est égal à autre chose');
 }
+
+//Utilisation des ternaire
+let number = Number(prompt("entrer un nombre"));
+console.log(number >=0 ? 'Le nombre est positif' : 'Le nombre est négatif');
