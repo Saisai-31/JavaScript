@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 6 JS</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let nb;
+        let notes = new Array(nb);
+        let moyenne = 0;
+        
+            nb = Number(prompt("Entrez le nombre de vos notes"));  
+            for(i=0; i<nb; i++){
+            notes[i] = Number(prompt("Entrez votre note" + (i+1)));3
+            console.log(notes[i]);
+            moyenne += notes[i];
+            
+        }
+        moyenne = moyenne / notes.length;
+        
+        alert("La moyenne est :" +moyenne.toFixed(2));
+    </script>
+</body>
+</html>
