@@ -13,8 +13,8 @@
        let prixht, prixttc;
             prixht=Number(prompt("Veuillez entrer le prix HT"))
             prixttc=prixht*1.20;
-        document.write("Le prix TTC est : " +prixttc);
-        console.log("Le prix TTC est : " +prixttc);
+        document.write("Le prix TTC est : " +prixttc.toFixed(2) +"€");
+        console.log("Le prix TTC est : " +prixttc.toFixed(2) +"€");
     </script>
 
 <!-- Ex2: A l'aide de la fonction prompt(), demander un prix HT puis un taux de la TVA à l'utilisateur puis insérer le prix TTC dans la page HTML. -->
@@ -23,8 +23,8 @@
         prixHT=Number(prompt("Veuillez entrer le prix HT"));
         TVA=Number(prompt("Veuillez entrer le taux de TVA"));
         prixTTC=((prixHT*TVA)/100)+prixHT;
-        document.write("Le prix TTC est : " +prixTTC);
-        console.log("Le prix TTC est : " +prixTTC);
+        document.write("Le prix TTC est : " +prixTTC.toFixed(2) +"€");
+        console.log("Le prix TTC est : " +prixTTC.toFixed(2) +"€");
     </script>
 
 <!-- Ex3: A l'aide de la fonction prompt(), demander un prix HT puis un taux de la TVA à l'utilisateur puis insérer le prix TTC dans la page HTML. Si le prix TTC est strictement supérieur à 100 on affichera le prix en rouge sinon en vert. Pour simplifier on utilisera les bouts de code suivants sur l'élément HTML de votre choix :
@@ -37,9 +37,11 @@
             //console.log("Le prix TTC est : " +PRIXTTC);
 
         if (PRIXTTC>100){
-            document.body.innerHTML = "Le prix TTC est : "+'<h1 style="color: red;">' + PRIXTTC + "</h1>";
+            // document.body.innerHTML = "Le prix TTC est : "+'<h1 style="color: red;">' + PRIXTTC + "</h1>";
+            document.write("<p style='color: red'>Le prix TTC est : " + PRIXTTC.toFixed(2) + " €</p>");
         }else{
-            document.body.innerHTML = "Le prix TTC est : "+'<h1 style="color: green;">' + PRIXTTC + '</h1>';
+            // document.body.innerHTML = "Le prix TTC est : "+'<h1 style="color: green;">' + PRIXTTC + '</h1>';
+            document.write("<p style='color: green'>Le prix TTC est : " + PRIXTTC.toFixed(2) + " €</p>");
         }
     </script>
 

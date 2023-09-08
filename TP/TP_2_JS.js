@@ -17,8 +17,8 @@ let maths = 8;
 let francais = 15;
 let hg = 17;
 let moyenne = (maths+francais+hg)/3;
-alert("la moyenne est "+moyenne);
-console.log("la moyenne est "+moyenne);
+alert("la moyenne est "+moyenne.toFixed(2));
+console.log("la moyenne est "+moyenne.toFixed(2));
 
 //Exeercice 3
 let budget = 100;
