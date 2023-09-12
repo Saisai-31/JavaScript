@@ -2,13 +2,14 @@
 let prenom;
 prenom = prompt("Entrer votre prénom");
 document.write("Bonjour "+prenom);
+alert("Bonjour "+prenom)
 console.log("Bonjour " +prenom);
 
 //Exercice 1
-let a, b;
+let a, b, result;
 a = Number(prompt("Entrez un nombre"));
 b = Number(prompt('entrez un autre nombre'));
-let result = a + b;
+result = a + b;
 alert("Le résultat est "+result);
 console.log("Le résultat est "+result);
 
