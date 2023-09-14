@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Images</title>
+</head>
+<body>
+    <img src="img/mm1.jpg" alt="" id="im1" width="300" height="300">
+    <img src="img/mm2.jpg" alt="" width="300" height="300">
+    <img src="img/mm3.jpg" alt="" width="300" height="300">
+    <img src="img/mm4.jpg" alt="" width="300" height="300">
+    <input type="button" value="Copine" onclick="cheval()">
+    <input type="button" onclick='window.location.reload(false)' value="Rafraichir"/>
+
+    <script>
+        function cheval(){
+            //document.getElementById("im1").src="img/mm4.jpg";
+        for(i=1; i<document.getElementsByTagName("img").length;i++){
+            document.getElementsByTagName("img")[i].src="img/mm3.jpg";
+        }
+    }
+    </script>
+
+
+
+</body>
+</html>

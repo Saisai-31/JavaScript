@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonction 2</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body onload="alert('Page chargée')">
+    <input type="button" value="Bouton popup" onclick="popup()"> <br>
+    <input type="button" value="Bouton rouge" onclick="j()"> <br>
+    <input type="button" value="Bouton retarder" onclick="i()"> <br>
+    <input class="jaune" type="button" value="Bouton 1" onclick="f()"> <br>
+    <input type="button" value="survol" onmouseover="g()"> <br>
+    <input id="vert" type="button" value="doubleclick" ondblclick="h()"> <br>
+    <textarea onchange="alert('Qu/ as tu écris ?')"></textarea>
+    <input type="submit" onclick="submit()">
+    
+
+    <script>
+        function f(){
+            alert("Vous avez cliqué sur le bouton 1");
+        }
+        function g(){
+            alert("Vous avez survolé le bouton 2");
+            
+        }
+        function h(){
+            alert("Vous avez cliqué 2 fois sur le bouton 3");
+            document.getElementById("vert").style.background="green";
+        }
+        function j(){
+            document.body.style.background="red";
+        }
+        function popup(){
+            window.open("https://www.google.fr");
+        }
+        function retarde(){
+            alert("Retarder l'éxécution de la fonction de 2 secondes");
+        }
+        function i(){
+            setTimeout("retarde()", 2000);
+        }
+        function submit(){
+            alert("Vous avez soumis le bouton");
+        }
+        
+    </script>
+
+</body>
+</html>

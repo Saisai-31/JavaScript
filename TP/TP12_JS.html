@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 12 JS</title>
+</head>
+<body>
+   
+    <h3>1/ Dans une page HTML5 réaliser un script permettant d’afficher les nombres de 20 à 0 avec décrémentation d’un pas égal à 2 . Exemple: 20-18-16</h3>
+   <script>
+    for(i=20; i>=0; i-=2){
+        document.write(i+" ");
+        console.log(i);
+    }
+    </script>
+
+    <h3>2/ Écrire une page HTML faisant apparaître les nombres premiers compris entre 0 et 100</h3>
+    <script>
+
+        let nbr = 0;
+        for(n=0;n<100;n++){
+            nbr+=1;
+            nbrpremier(nbr); 
+            if(nbrpremier(nbr) ===true){
+                document.write(nbr+" ");
+                console.log(nbr+" ");
+            }
+            
+        }
+
+        function nbrpremier(num) { 
+            if (num <= 1) return false; 
+            if (num === 2) return true; 
+            for (i=2; i<num; i++) 
+                { if (num%i === 0) return false; } return true;
+            }
+            
+    </script>
+
+
+
+</body>
+</html>
