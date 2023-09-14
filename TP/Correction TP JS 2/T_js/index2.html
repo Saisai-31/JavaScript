@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const monTab = [];
+        monTab[0]=12;
+        console.log(monTab);
+        monTab[1]="Mardi";
+        monTab[2]="Mardi";
+        console.log(monTab.push(2));
+        var note = new Array();
+2 var moyenne = 0;
+3 var nb;
+4
+5 nb = prompt("Entrer le nombre de notes");
+6 nb = parseInt(nb,10);
+7 for (var i=0;i<nb;i++){
+8 note[i] = prompt("Entrer la note " + (i+1));
+9 note[i] = parseInt(note[i],10);
+10 moyenne += note[i];
+11 }
+12
+13 moyenne = moyenne / nb;
+14 alert("La moyenne est " + moyenne);
+    </script>
+</body>
+</html>

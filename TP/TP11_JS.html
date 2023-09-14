@@ -8,17 +8,18 @@
 <body>
     <script>
         let tab = [10, 25, 35] ;
-            console.table(tab);
-        tab.push(12); //ajoute à la fin du tableau
-            console.table(tab);
+                console.table(tab);
+            tab.push(12); //ajoute à la fin du tableau
+                console.table(tab);
+            tab.splice(1,1);// supprime une ligne, a partir de l'index 1 supprimer 1 élément
+                console.table(tab);
         ///tab.unshift(100); //ajout au début du tableau
            // console.table(tab);
         //tab.pop() //supprime à la fin
             //console.table(tab);
         //tab.shift() //supprime au début
             //console.table(tab);
-            tab.splice(1,1);
-            console.table(tab);
+            
 
 
 

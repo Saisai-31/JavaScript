@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Fonctions prédéfinies-->
+        <script>
+            let machaine = "Le reveil n'a pas bien fonctionné ce matin !" ;
+           console.log( "taille de la chaine " + machaine.length); 
+           console.log("le caractète à la positon 5 est " + machaine.charAt(5)); 
+           console.log( machaine.indexOf("o")); 
+           console.log( machaine.substring(0, 3));/*La méthode substring(début,fin) permet d'extraire une partie de la chaîne de caractères commençant de la position début et finissant à la position fi*/
+           console.log(machaine.split("o"));
+           let maVar = machaine.split("o");
+           console.log(maVar.length);
+           alert(maVar.join("-"));
+           console.table(maVar);
+           console.log(machaine.toLowerCase());
+           console.log(machaine.toUpperCase());  
+
+           function afficher(){
+            alert("bonjour");
+           }
+           afficher();
+
+        </script>
+        
+
+   
+</body>
+</html>

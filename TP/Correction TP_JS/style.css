@@ -1,0 +1,26 @@
+#test{
+    color:red;
+    font-size: 1.5em;
+}
+@media screen and(min-width:1024px) and (max-width:1280px){
+    #test{
+        color:blue;
+        background-color: black;
+        font-size: 1.2em;
+    }
+}
+/**/
+@media screen and(min-width:768px) and(max-width:1024px){
+    #test{
+        color:green;
+        background-color: yellow;
+        font-size: 1em;
+    }
+}
+@media screen and(min-width:768px){
+    #test{
+        color:yellow;
+        background-color: blue;
+        font-size: 0.8em;
+    }
+}
