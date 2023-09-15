@@ -1,7 +1,19 @@
 body{
     margin: 0;
+    padding: 0;
     width: 100%;
     background: linear-gradient(0.25turn, red, yellow, green);
-display: flex;
-justify-content: space-around;
+}
+
+#input{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    
+}
+input{
+    display: flex;
+    flex-direction: column;
+    
+    
 }
