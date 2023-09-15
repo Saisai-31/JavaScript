@@ -1,19 +1,69 @@
 body{
     margin: 0;
     padding: 0;
-    width: 100%;
     background: linear-gradient(0.25turn, red, yellow, green);
 }
 
 #input{
     display: flex;
-    width: 80%;
-    height: 80%;
-    
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 60vh;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+      
 }
+
 input{
     display: flex;
-    flex-direction: column;
+    justify-content: center;  
+}
+
+.triangle, .rectangle, .carre, .cube{
+    background: linear-gradient(0.25turn, red, yellow, green);
+    box-shadow: 10px 10px 10px;
+    border-radius: 10px;
+    width: 20%;
+    height: 5%;
+    font-weight: bold;
+}
+
+input:hover{
+    transform: scale(1.5);
+}
+
+
+#entete{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    background-color: green;
+    height: 20vh;
+    align-items: center;
+    gap: 33%;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img{
+    height: 15vh;
+}
+
+#piedpage{
+    height: 20vh;
+    background-color: red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right:  50px;
+    font-size: x-large;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.sai{
     
-    
+
 }
