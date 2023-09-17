@@ -9,26 +9,23 @@
    
     <h3>1/ Dans une page HTML5 réaliser un script permettant d’afficher les nombres de 20 à 0 avec décrémentation d’un pas égal à 2 . Exemple: 20-18-16</h3>
    <script>
-    for(i=20; i>=0; i-=2){
-        document.write(i+" ");
-        console.log(i);
-    }
+        for(i=20; i>=0; i-=2){
+            document.write(i+" ");
+            console.log(i);
+        }
     </script>
 
     <h3>2/ Écrire une page HTML faisant apparaître les nombres premiers compris entre 0 et 100</h3>
     <script>
-
         let nbr = 0;
         for(n=0;n<100;n++){
             nbr+=1;
             nbrpremier(nbr); 
             if(nbrpremier(nbr) ===true){
-                document.write(nbr+" ");
-                console.log(nbr+" ");
-            }
-            
+            document.write(nbr+" ");
+            console.log(nbr+" ");
+            }          
         }
-
         function nbrpremier(num) { 
             if (num <= 1) return false; 
             if (num === 2) return true; 
@@ -36,6 +33,33 @@
                 { if (num%i === 0) return false; } return true;
             }
             
+    </script>
+    <h3>3/ Créer une page HTML , appelée Tableaux.html, faisant apparaître la table de multiplication pour les entiers compris entre 1 et 10 et présenter le résultat dans un tableau [11 x 11]....
+    </h3>
+    <p>Voir le fichier TP12_tableaux.html</p>
+
+    <h3>Reprendre l’exercice précédent avec des entiers compris entre 0 et k. La valeur de K sera demandée à l’utilisateur  via une boîte de dialogue.
+        En cas de saisie d’un nombre non entier ou supérieure à 20 le script redemande l’utilisateur de saisir une nouvelle valeur.
+    </h3>
+    <script>
+        let k = parseInt(prompt("Veuillez entrer un nobre entier entre 0 et 20"));
+        function nbrentier() {
+            if (k>20);
+                alert("Veuillez entrer un nombre strictement compris entre 0 et 20");
+        
+        }
+        nbrentier()
+
+        for(k; k>=0; k-=2){
+        document.write(k+" ");
+        console.log(k);
+        }
+        
+
+
+
+
+
     </script>
 
 
