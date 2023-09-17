@@ -42,22 +42,62 @@
         En cas de saisie d’un nombre non entier ou supérieure à 20 le script redemande l’utilisateur de saisir une nouvelle valeur.
     </h3>
     <script>
-        let k = parseInt(prompt("Veuillez entrer un nobre entier entre 0 et 20"));
-        function nbrentier() {
-            if (k>20);
-                alert("Veuillez entrer un nombre strictement compris entre 0 et 20");
-        
-        }
-        nbrentier()
+        let k;
+        while (true) {
+        k = parseFloat(prompt("Entrez un entier K compris entre 0 et 20 :"));
 
-        for(k; k>=0; k-=2){
+        // Si l'utilisateur clique sur Annuler ou saisit une chaîne vide, quitter la boucle
+        if (k === null || k === "") {
+            break;
+        }
+
+        // Vérifier si l'entrée est un nombre entier valide entre 0 et 20
+        if (k >= 0 && k <= 20 && k % 1 === 0){
+            break; // Sortir de la boucle si l'entrée est valide
+        } else {
+            alert("Veuillez entrer un nombre entier valide entre 0 et 20.");
+        }
+        }
+   
+        for(k; k>=0; k-=2) {
         document.write(k+" ");
         console.log(k);
         }
-        
+    </script>
 
+    <h3>Pour cet exercice, il est demandé de créer un script qui demande à l’utilisateur de saisir trois variables numériques via une boîte prompt.
+        L’utilisateur est averti s’il ne saisit pas un nombre, le script lui demande de saisir une valeur numérique.
+        Une fois l’utilisateur a saisi trois valeurs numériques, le script teste les trois variables :
+        Si elles sont égales, écrire : "Les trois variables sont identiques."
+        Si seulement deux sont identiques, écrire :"deux des variables sont de valeurs égales."
+        Sinon, écrire :"Les trois variables sont différentes."
+    </h3>
+    <script>
+        let nombre1, nombre2, nombre3;
 
+        function saisirNombre(variableName) {
+        let value;
+        do {
+            value = prompt("Veuillez saisir un nombre pour " + variableName + " :");
+        } while (value === null || isNaN(value));
+        return parseFloat(value);
+        }
 
+        nombre1 = saisirNombre("nombre 1");
+        nombre2 = saisirNombre("nombre 2");
+        nombre3 = saisirNombre("nombre 3");
+
+        console.log("Vous avez saisi les nombres suivants :"+nombre1+" "+nombre2+" " +nombre3);
+        document.write("Vous avez saisi les nombres suivants :"+" "+nombre1+" "+nombre2+" " +nombre3+",");
+
+        if(nombre1===nombre2 && nombre1===nombre3){
+            document.write(" "+"les trois variables sont égales.");
+        }
+        else if(nombre1===nombre2 || nombre1===nombre3 || nombre2===nombre3){
+            document.write(" "+"deux des variables sont de valeurs égales.");
+        }else{
+            document.write(" "+"les trois variables sont différentes.");
+        }
 
 
     </script>
