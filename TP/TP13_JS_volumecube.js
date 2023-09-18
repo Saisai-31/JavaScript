@@ -4,5 +4,5 @@ function volumecube(){
     let hauteur = parseInt(prompt("Entrez la hauteur du cube en cm"));
 
     let result = longueur * largeur * hauteur;
-    alert("L'aire du rectangle est : "+result+"cm3")
+    alert(result > 0 ? "L'aire du cube est : "+result+"cm²" : "Veuillez entrer un nombre à largeur, longueur et la hauteur");
 }
