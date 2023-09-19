@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modification texte et couleur</title>
+</head>
+<body>
+    <h1>Modification texte et couleur</h1>
+
+    <h3>Afficher une valeur dans un autre champs de texte</h3>
+    <form action="">
+        <input type="text" id="texte1" value="" size="30"><br>
+        <input type="button" id="bouton" value="Afficher" size="30" onclick="afficher()"><br><br>
+        <input type="text" id="texte2" value="" size="30">
+    </form>
+
+
+    <script>
+        function afficher(){
+            var saisie = document.getElementById("texte1").value;
+            document.getElementById("texte2").value=saisie;
+            document.getElementById("texte2").style.color="red";
+        }
+
+    
+    </script>
+
+</body>
+</html>

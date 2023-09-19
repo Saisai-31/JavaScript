@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: beige;
+    align-items: center;
+    justify-content: center;
+}
+
+#imc{
+    border: 5px groove grey;
+    border-radius: 20px;
+    display: flex;
+    height: 50vh;
+    width: 50vw;
+    background-color: lightgray;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+input{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 20px;
+    text-align: center;
+}
+#but{
+    background: linear-gradient(grey, beige);
+    font-weight: bold;
+}
+#res{
+    background: linear-gradient( beige,grey);
+    font-weight: bold;
+}
