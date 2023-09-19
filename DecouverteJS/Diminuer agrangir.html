@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="plus()">Augmenter</button>
+    <button onclick="moins()">Diminuer</button>
+    <img id="cible" src="lionrast.jpg" alt="">
+
+
+    <script>
+        function plus(){
+        document.getElementById("cible").width += 50;
+        document.getElementById("cible").height += 50;
+        }
+
+        function moins(){
+            document.getElementById("cible").width -= 50;
+            document.getElementById("cible").height -= 50;
+        }
+    </script>
+</body>
+</html>
