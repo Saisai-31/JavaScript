@@ -7,7 +7,9 @@
 body {
     height: 100vh;
     display: flex;
-    background-color: beige;
+    flex-wrap: wrap;
+    background-image: url(quel-est-mon-poids-ideal.jpg);
+    background-size: 50% 50%;
     align-items: center;
     justify-content: center;
 }
@@ -16,6 +18,7 @@ body {
     border: 5px groove grey;
     border-radius: 20px;
     display: flex;
+    flex-wrap: wrap;
     height: 50vh;
     width: 50vw;
     background-color: lightgray;
@@ -36,6 +39,9 @@ input{
     font-weight: bold;
 }
 #res{
-    background: linear-gradient( beige,grey);
+    background: linear-gradient( beige,grey,);
     font-weight: bold;
+}
+#phrase{
+    font-size: larger;
 }
