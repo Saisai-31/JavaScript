@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TP16_JS_formules.css">
+    <title>TP 16 JS Formules</title>
+</head>
+<body>
+    
+    <h1>D'après une forme géométrique, trouvez la formule</h1>
+    <div id="formule">
+    <form action="">
+        <label for="">Choisissez une forme géométrique :</label>
+        <select name="" id="geometrie">
+            <optgroup label="Les figures géométriques planes">
+                <option value=""></option>
+                <option value="cercle">Cercle</option>
+                <option value="triangle">Triangle</option>
+                <option value="carré">Carré</option>
+                <option value="rectangle">Rectangle</option>
+            </optgroup>
+          
+            <optgroup label="Les figures géométriques solides">
+                <option value="cube">Cube</option>
+                <option value="boule">Boule</option>
+                <option value="cylindre">Cylindre</option>
+            </optgroup>
+
+            <input class="but" type="button" value="Formules" onClick="formule()">
+
+            <textarea name="" id="resultat" cols="30" rows="10"></textarea>              
+        </select>
+    </div>  
+    </form>
+
+    <script>
+        function formule(selectElmt,valeurselectionnee,textselectionne){ 
+        selectElmt = document.getElementById("geometrie");
+        valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+        textselectionne = selectElmt.options[selectElmt.selectedIndex].text;
+
+        if(textselectionne=="Cercle"){
+            document.getElementById("resultat").innerHTML = "Le périmètre du cercle est : 2 * PI * rayon  et l'aire du cercle est : PI * (rayon*2)";
+        }
+        else if(textselectionne=="Triangle"){
+            document.getElementById("resultat").innerHTML = "Le périmètre du triangle est : côté + côté + côté  et l'aire du triangle est : (base * hauteur) / 2";
+        }
+        else if(textselectionne=="Carré"){
+            document.getElementById("resultat").innerHTML = "Le périmètre du carré est : côté * 4  et l'aire du carré est : côté * côté";
+        }
+        else if(textselectionne=="Rectangle"){
+            document.getElementById("resultat").innerHTML = "Le périmètre du rectangle est : (longueur + largeur) * 2  et l'aire du rectangle est : longueur * largeur";
+        }
+        else if(textselectionne=="Cube"){
+            document.getElementById("resultat").innerHTML = "Le volume d'un cube est : longueur * largeur * hauteur";
+        }
+        else if(textselectionne=="Boule"){
+            document.getElementById("resultat").innerHTML = "Le volume d'une Boule est : 4 * PI * rayon²";
+        }
+        else if(textselectionne=="Cylindre"){
+            document.getElementById("resultat").innerHTML = "Le volume d'un cylindre est : 4 * PI * rayon² * hauteur";
+        }
+    }
+    </script>
+
+
+
+
+</body>
+</html>

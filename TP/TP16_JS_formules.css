@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(Figures-geometriques-CP_00001-1024x576.jpg);
+    background-size: 100vw 100vh;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+
+}
+
+#formule{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100vw;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.but{
+    border-radius: 20px;
+    height: 30px;
+    font-weight: bold;
+}
+#resultat{
+    border-radius: 20px;
+    padding: 10px;
+}
+#geometrie{
+    border-radius: 20px;
+    height: 30px;
+    text-align: center;
+}
+label{
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+}
