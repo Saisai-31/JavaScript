@@ -20,7 +20,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 70vh;
     width: 100vw;
 }
 
@@ -38,6 +38,7 @@ form{
 #resultat{
     border-radius: 20px;
     padding: 10px;
+    height: 80px;
 }
 #geometrie{
     border-radius: 20px;

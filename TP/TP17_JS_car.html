@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TP17_JS_car.css">
+    <title>TP 17 JS Compte à rebours</title>
+</head>
+<body>
+    <div >
+        <h1  id="go" onclick="signal()">GO !</h1>
+    </div>
+    <div >
+        <button onclick="reinitialiser()">Rafraîchir</button>
+    </div>
+    
+<script>
+    var compteur = 3;
+    var intervalId; // Me permet de stocker l'ID de l'intervalle
+    
+    function signal() {
+        document.getElementById("go").innerHTML= compteur;
+        compteur--;
+
+        if(compteur >= 0){
+            intervalId = setTimeout(signal, 1000);
+
+        }else{
+            document.getElementById("go").innerHTML="Lancement !";
+        }
+    }
+    function reinitialiser() {
+      clearTimeout(intervalId); // Arrête le compte à rebours actuel
+      compteur = 3; // Réinitialise le compteur
+      document.getElementById("go").innerHTML = "GO !"; // Réinitialise le texte
+    }
+</script>
+
+
+
+</body>
+</html>

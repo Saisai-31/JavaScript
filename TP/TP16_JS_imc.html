@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TP17_JS.css">
+    <link rel="stylesheet" href="TP16_JS_imc.css">
     <title>TP 17 JS IMC</title>
 </head>
 <body>
@@ -14,13 +14,9 @@
     <input type="button" value="Calcul de votre IMC" onclick="imc()" id="but">
     <input type="text" id="res" placeholder="Votre IMC">
     <p id="phrase"></p>
-
     </div>
 
-    <script>
-
-        
-        
+    <script>     
         function imc(){
             p = document.getElementById("kilo").value;
             t = document.getElementById("taille").value;
@@ -44,16 +40,8 @@
             }else{
                 document.getElementById("phrase").textContent="Vous êtes en obésité sévère";
                 document.getElementById("phrase").style.color="red";
-            }
-            
+            }     
         }
-        
-        
-
-        
-           
-
-
     </script>
 </body>
 </html>
