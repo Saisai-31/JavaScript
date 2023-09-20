@@ -11,15 +11,19 @@ function jeux(){
         coups++;
         
         if(val){
-            if(val==nombreAléatoire){document.getElementById("result").value = ("Bravo tu a trouvé le chiffre en " + coups + " essai(s) !!");
+            if(val==nombreAléatoire){
+                document.getElementById("result").value = ("Bravo tu a trouvé le chiffre en " + coups + " essai(s) !!");
+                document.getElementById("result").style.color="red";
             break;
         }
         else if(val < nombreAléatoire){
             document.getElementById("result").value = ("C'est plus grand !");
+            document.getElementById("result").style.color="blue";
             break;
         }
         else
             document.getElementById("result").value = ("C'est plus petit !");
+            document.getElementById("result").style.color="green";
         break;
     }else{
         break;
