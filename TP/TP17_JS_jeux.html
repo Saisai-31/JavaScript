@@ -11,7 +11,9 @@
     <h2>entre 0 et 100</h2>
     <div id="trouver">
     <form action="">
-        <input id="chiffre" type="text" placeholder="Entre ton chiffre" value="">
+        <!-- <input id="chiffre" type="text" placeholder="Entre ton chiffre" value=""> -->
+        <!-- onkeydown="if (event.keyCode == 13)jeux() permet de remplacer mon bouton clique en appyant sur "entré" -->
+        <input type="text" id="chiffre" placeholder="Entrez votre chiffre" onkeydown="if (event.keyCode == 13)jeux()"/>
         <input id="bout" type="button" onclick="jeux()" value="Clique pour voir la réponse">      
         <input id="result" type="text" value="" readonly>
         <input id="rejoue" type="button" value="Rejouer" onclick="rejouer()">
