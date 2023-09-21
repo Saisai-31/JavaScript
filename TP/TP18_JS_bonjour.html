@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TP18_JS_bonjour.css">
     <title>TP 17 JS Bouton Chiffre</title>
 </head>
 <body>
-    <input type="button" value="Clique sur le bouton" onclick="chiffre()">
+    <button  onclick="chiffre()">Clique sur le bouton</button>
     
     <p id="but"></p>
+
+    <button id="efface">Effacer</button>
 
 
 <script>
@@ -18,7 +21,13 @@
             document.getElementById("but").innerHTML += "Bonjour ";
         }
     };
+
+    document.getElementById("efface").addEventListener('click', function(){
+        document.getElementById("but").innerHTML="";
+        })
+    
 </script>
+
 
 </body>
 </html>

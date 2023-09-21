@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(ile.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 60px;
+    width: 150px;
+    background: linear-gradient(0.25turn, grey,lightgrey);
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: large;
+}
+p{
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 10px groove grey;
+    padding: 25px;
+    width: 60vw;
+    height: 55vh;
+    font-size: x-large;
+    font-weight: bold;
+    color: purple;
+    text-align: center;
+}

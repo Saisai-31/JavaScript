@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addEventListener.css">
+    <title>addEventListener</title>
+</head>
+<body>
+    <button>Go</button>
+    <form action="">
+        <input type="text">
+        <input type="submit">
+        <input type="reset" name="" id="" value="Effacer">
+    </form>
+    <button id="btn"></button>
+
+    <button id="btn2"></button>
+    <button id="btn3"></button>
+
+
+
+    <script>
+        document.getElementById("btn").innerHTML="Allons y";
+        let btn = document.getElementById("btn");
+        let compteur = 0;
+
+        btn.addEventListener('click', function(){
+            compteur = compteur + 1;
+            console.log(compteur+" bouton cliqué");
+        })
+
+
+
+
+    </script>
+</body>
+</html>
