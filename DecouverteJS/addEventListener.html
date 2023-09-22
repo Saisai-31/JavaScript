@@ -13,21 +13,49 @@
         <input type="submit">
         <input type="reset" name="" id="" value="Effacer">
     </form>
+    <div >
     <button id="btn"></button>
-
     <button id="btn2"></button>
-    <button id="btn3"></button>
+    <button id="rejouer">Rejouer</button>
+    <p id="score"></p>
+    </div>
+    
 
 
 
     <script>
-        document.getElementById("btn").innerHTML="Allons y";
+        //Je sélectionne et stocke
         let btn = document.getElementById("btn");
+        let btn2 = document.getElementById("btn2");
+        const score = document.getElementById("score")
         let compteur = 0;
 
-        btn.addEventListener('click', function(){
+        //Je soumets le cercle rouge (btn) à une action
+        btn.addEventListener("click",function(){
+            add(); //J'appel la fontion add
+        })
+
+        //Je soumets le cercle purple (btn2) à une action
+        btn2.addEventListener("click", function(){
+            add(); //J'appel la fontion add
+        })
+
+        // Je mets le code commmun 
+        function add(){
             compteur = compteur + 1;
-            console.log(compteur+" bouton cliqué");
+            console.log(compteur, "bouton clické");
+            score.innerText=compteur;
+
+        }
+        //Je supprime les cercles
+        setTimeout(function(){
+            btn.remove();
+            btn2.remove();
+        },10000);
+
+        //Je soumets le bouton rejouer à une action
+        rejouer.addEventListener('click', function(){
+            location.reload(); //Rafraîchir la page, fonction ayant le même rôle que le bouton rafraichir du navigateur
         })
 
 

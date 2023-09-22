@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelecto</title>
+</head>
+<body>
+    <div></div>
+    <h1></h1>
+    <h2 id="bb"></h2>
+    <div class="cc"></div>
+
+
+
+<script>
+    // J'utilise querySelector pour cibler une div
+    document.querySelector('div').innerHTML = "Salut les gens";
+
+    //querySelector cible h1
+    document.querySelector("h1").innerText = "Coucou";
+
+    //querySelector cible un id
+    document.querySelector('#bb').innerHTML = "Buenos";
+
+    //querySelector cible une classe
+    document.querySelector('.cc').innerHTML = "Sawatdii Krap";
+
+    //Créer un nouvel élément sur la papge
+    const para = document.createElement("p");
+    para.innerText = "Passer un bon week-end";
+    document.body.appendChild(para);
+
+    const monH1 = document.createElement("h1");
+    monH1.innerText = "Pasez un week-end de ouf";
+    document.body.append(monH1);
+
+    monH1.className = "maClasse";
+
+
+
+</script>
+
+
+</body>
+</html>

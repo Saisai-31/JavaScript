@@ -1,4 +1,4 @@
-#btn2{
+#btn{
     background-color: red;
     border-radius: 50%;
     height: 50px;
@@ -16,7 +16,7 @@
     100%{left:0px;top:0px}
 }
 
-#btn3{
+#btn2{
     background-color: purple;
     border-radius: 50%;
     height: 50px;
