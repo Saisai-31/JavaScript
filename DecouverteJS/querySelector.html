@@ -11,35 +11,47 @@
     <h2 id="bb"></h2>
     <div class="cc"></div>
 
+    <style>
+        .maClasse{
+            color: red;
+        }
+        #para{
+            color: blue;
+        }
+
+</style>
+
+    <script>
+        // J'utilise querySelector pour cibler une div
+        document.querySelector('div').innerHTML = "Salut les gens";
+
+        //querySelector cible h1
+        document.querySelector("h1").innerText = "Coucou";
+
+        //querySelector cible un id
+        document.querySelector('#bb').innerHTML = "Buenos";
+
+        //querySelector cible une classe
+        document.querySelector('.cc').innerHTML = "Sawatdii Krap";
+
+        //Créer un nouvel élément sur la papge
+        const para = document.createElement("p");
+        //Insérer du texte dans le nouvel élément
+        para.innerText = "Passer un bon week-end";
+        //Intégrer lenouvel élément dans le body 
+        document.body.appendChild(para);
+        //J'assigne un id à mon p (para)
+        para.id = "para"
+
+        const monH1 = document.createElement("h1");
+        monH1.innerText = "Pasez un week-end de ouf";
+        document.body.append(monH1);
+        //J'assigne une classe à h1 (monH1)
+        monH1.className = "maClasse";
 
 
-<script>
-    // J'utilise querySelector pour cibler une div
-    document.querySelector('div').innerHTML = "Salut les gens";
 
-    //querySelector cible h1
-    document.querySelector("h1").innerText = "Coucou";
-
-    //querySelector cible un id
-    document.querySelector('#bb').innerHTML = "Buenos";
-
-    //querySelector cible une classe
-    document.querySelector('.cc').innerHTML = "Sawatdii Krap";
-
-    //Créer un nouvel élément sur la papge
-    const para = document.createElement("p");
-    para.innerText = "Passer un bon week-end";
-    document.body.appendChild(para);
-
-    const monH1 = document.createElement("h1");
-    monH1.innerText = "Pasez un week-end de ouf";
-    document.body.append(monH1);
-
-    monH1.className = "maClasse";
-
-
-
-</script>
+    </script>
 
 
 </body>
