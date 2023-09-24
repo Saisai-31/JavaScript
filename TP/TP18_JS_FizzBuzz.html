@@ -6,38 +6,24 @@
     <title>TP 18 JS Fizz Buzz</title>
 </head>
 <body>
-    
+    <p id="imprim"></p>
 
 
 
     <script>
         function repartir(){
+            let result
             for(i=1; i <= 100; i++){
-                console.log(i);
-                if(i % 3 === 0){
-                
-                    return " Fizz";  
+                if(i % 3 == 0 && i % 15 == 0)
+                    console.log("Fizz Buzz");
+                else if(i % 3 == 0)
+                    console.log("Fizz");   
+                else if(i % 5 == 0)
+                    console.log("Buzz");
+                else
+                    console.log(i);
                 }
-                console.log(i);
-               
-        }
-        repartir()
-        
-        
-        // if(i % 5 === 0){
-        //             return " Buzz"; 
-        //         }
-
-        //         if(i % 3 === 0 && i % 15 === 0) {
-        //            return " FizzBuzz"
-                    
-        //         }
-
-        //         if (i === "") {
-        //             return i;
-        //         }
-        //         console.log(i);
-        //     }
+            }  
+            repartir()
+            
     </script>
-</body>
-</html>
