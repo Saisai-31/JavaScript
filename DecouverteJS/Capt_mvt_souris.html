@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*
+            Auteur : Magne MATANGOU
+            Date :  25/03/2023
+            Cour: Gestion des évènements en JS. Capturer la position de la souris sur une carte.
+        */
+        /* position de l'image */
+        img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: thick solid blue;
+            width: 500px;
+        }
+        /* position des textes */
+        a{
+            position: relative;
+            top: 350px;
+            left: 0px;
+        }
+    </style>
+    <title>Position de la souris sur une carte</title>
+</head>
+<body>
+    <a id="la cible">La cible ou target :</a><br>
+    <a id="le conteneur de la cible">Le conteneur de la cible ou current target :</a><br>
+    <a id="posx">La position x de la souris : </a><br>
+    <a id="posy">La position y de la souris : </a><br>
+
+    <div>
+        <img src="europe.jpg">
+    </div>
+
+    <script>
+        /* 
+            1. sur le conteneur div, je capture l'évènement enfoncement du bouton gauche de la souris et j'exécute la fonction test1.
+            2. Le 3ème paramètre false indique de laisser l'évènement remonter dans la hiérarchie des objets. On dit que l'évènement bouillonne.
+        */
+       let c1 = document.querySelector("div").addEventListener("mousedown",test1, false);
+
+       function test1(){
+            // j'affiche le nom de la cible
+            document.getElementById("la cible").innerHTML+=event.target.tagName;
+
+            //j'affiche le nom du conteneur de la cible
+            document.getElementById("le conteneur de la cible").innerHTML+=event.currentTarget.tagName;
+
+            //j'affiche la position horizentale du pointeur dela souris
+            document.getElementById("posx").innerHTML+=event.clientX;
+
+            //j'affiche la postion verticale du pointeur de la souris
+            document.getElementById("posy").innerHTML+=event.clientY;
+
+            //sur l'image, je capture l'évènement déplacement de la souris
+            let c1 = document.querySelector('img').addEventListener("mousemove",test2,false);
+
+            function test2(){
+                //je remets à zéro les valeurs
+                document.getElementById("posx").innerHTML="";
+                document.getElementById("posy").innerHTML="";
+
+                //j'affiche les coordonnées de la souris
+                document.getElementById("posx").innerHTML+=event.clientX;
+                
+                //j'affiche la position verticale du pointeur de la souris
+                document.getElementById("posy").innerHTML+=event.clientY;
+            }
+       }
+    </script>
+</body>
+</html>
