@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau JS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2{
+            text-align: center;
+        }
+        html, body{
+            height: 100%;
+        }
+        body{
+            background: linear-gradient(0.25turn, blue,#3f87a6, lightblue);
+            display: grid;
+            grid-template-rows: 0fr 0fr 1fr;
+        }
+        footer{
+            background: royalblue;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            border-top: 1px solid black;
+            color: bisque
+        }
+        div{
+            font-size: large;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faire un tableau avec JavaScript</h1>
+    <h2>Utiliser les boucles For et While</h2>
+
+    <div>
+        <script>
+        const MoisAnnee = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+        console.log(MoisAnnee);
+
+        for(i=0; i<MoisAnnee.length; i++){
+            document.write(MoisAnnee[i] + "<br>")
+        };
+        </script>
+    </div>
+
+     <footer>
+        <p>Saïsaï</p>
+        &copy;DWWM 2023
+    </footer>
+</body>
+</html>
