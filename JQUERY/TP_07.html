@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>TP 07</title>
+    <style>
+        div{
+            width: 150px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px double black;
+        }
+        .arriereplan{
+            background-color: #9cf;
+            cursor: pointer
+        }
+      
+    </style>
+</head>
+<body>
+    <div>Important</div>
+    <div>Important</div>
+    <div>Important</div>
+    
+   
+   
+    <script>
+        $(document).ready(function(){
+          $("div").mouseover(function(){
+            $(this).addClass("arriereplan");
+          });
+          $("div").mouseout(function(){
+            $(this).removeClass("arriereplan");
+          });
+        });
+
+    </script>
+</body>
+</html>

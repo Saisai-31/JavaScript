@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>TP 03</title>
+    <style>
+        span#box{
+            display: block;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            margin: 5px;
+            float: left;
+            background: #eee;
+        }
+        p{
+            margin: 20px;
+            text-align: center;
+        }
+        div span{
+            padding: 0 5px;
+        }
+        img{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <span id="box">
+        <div>&nbsp;</div>
+        <div>
+            <p>X <img src="oiseau.jpg" alt="">X</p>
+        </div>
+        <div>
+            <p>
+                Par <br>
+                <span>a</span><br>graphe
+            </p>
+        </div>
+    </span>
+
+    <script>
+        $(document).ready(function(){
+            //$("#box *").css("border", "2px dashed black");
+            $("#box > *").css("border", "2px dashed black");
+        })
+
+    </script>
+</body>
+</html>
