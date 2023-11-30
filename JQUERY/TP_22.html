@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 22</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <input type="checkbox" checked="checked">
+    <p>&nbsp</p>
+    
+    
+    <script>
+        $(document).ready(function(){
+            $("input").change(function(){
+                let $input = $(this);
+                $("p").html(
+                    '<b>Attribut</b> .attr(\"checked\") : <b>' +
+                    $input.attr("checked") +
+                    "</b>.<br>" + 
+                    '<b>Propriété</b> .prop("checked") : <b>' +
+                        $input.prop("checked") +
+                        "</b>."
+                );
+            });      
+        });
+    </script>
+</body>
+</html>

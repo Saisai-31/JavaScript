@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 21</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>Mail :<input type="text" name="" id="input1"></p>
+        <p><input type="submit" id="soumettre" value="un seul envoie par utilisateur "></p>
+        
+    </form>
+    
+    
+    <script>
+           $(document).ready(function(){
+            $("#soumettre").click(function(){
+                event.preventDefault(); // Empêcher le comportement par défaut du formulaire
+                $("#soumettre").val("vous avez déjà soumis");
+            });
+        });
+    </script>
+</body>
+</html>

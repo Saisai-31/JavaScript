@@ -6,16 +6,37 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <title>TP 20</title>
     <style>
-       
+       div {
+        width: 150px;
+        height: 20px;
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+        background: linear-gradient(0.25turn, red, yellow, green);
+       }
       
     </style>
 </head>
 <body>
-   
+    <p>Notre navigateur</p>
+    <form action="">
+        <input type="radio" name="1" value="Edge">Edge <br>
+        <input type="radio" name="1" value="Firefox">Firefox <br>
+        <input type="radio" name="1" value="Safari">Safari <br>
+        <input type="radio" name="1" value="Opéra">Opéra <br>
+        <input type="radio" name="1" value="Chrome">Chrome <br>
+        <input type="radio" name="1" value="Autre">Autre <br>
+    </form>
+    <p><button>Afficher votre choix</button></p>
+    <p>Votre choix est :</p>
+    <div></div>
     
     <script>
         $(document).ready(function(){
-           
+            $("button").click(function(){
+                let choix = $("input:radio:checked").val();
+                $("div").text(choix);
+            })
         })
     </script>
 </body>
