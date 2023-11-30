@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 19</title>
+    <style>
+       
+      
+    </style>
+</head>
+<body>
+   <p><a href="#">Sans style</a></p>
+   <div style="background-color: #9cf; border: 2px solid black; font-weight: bold;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste architecto, reiciendis perferendis ipsum excepturi a dolor optio assumenda quibusdam voluptates alias dolorem ullam blanditiis vitae doloremque odio ea nesciunt?
+   </div>
+    
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+                $("div").removeAttr("style");
+            })
+        })
+    </script>
+</body>
+</html>

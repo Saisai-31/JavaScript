@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 18</title>
+    <style>
+        img{
+            width: 500px;
+        }
+        a{
+            color: black;
+        }
+      
+    </style>
+</head>
+<body>
+    <p><a href="#">image suivante</a></p>
+    <div><img src="oiseau.jpg" alt="Imge d'oiseau"></div>
+    
+    
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+                $("img").attr({src: "oiseau2.jpg", alt: "Imge d'oiseau 2", title: "Oiseaux"})
+            })
+        })
+    </script>
+</body>
+</html>

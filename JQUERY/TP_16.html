@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 16</title>
+    <style>
+      div{
+        width: 150px;
+        height: 18px;
+        border: 1px solid black;
+      }
+     
+    </style>
+</head>
+<body>
+    <p><button>afficher le style css</button></p>
+    <p>jQuerry est un framework <span style="font-style: italic">Javascript</span> libre</p>
+    <p>le style css de l'élément&lt; span&gt; est</p>
+    <div></div>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                let style_css = $("span").attr("style")
+                $("div").text("style_css")
+            })
+        })
+    </script>
+</body>
+</html>

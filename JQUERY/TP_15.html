@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 15</title>
+    <style>
+       a{
+        color: black;
+       }
+       div{
+        width: 255px;
+        padding: 3px;
+        border: 1px solid black;
+       }
+       .cacher{
+        display: none;
+       }
+     
+    </style>
+</head>
+<body>
+    <p><a href="#">Afficher / Masquer</a></p>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque rem laborum accusantium iure voluptatem iste, iusto laboriosam pariatur consequuntur asperiores quas dignissimos repellendus? Iure labore facere architecto. Nesciunt, reiciendis quo?
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+                $("div").toggleClass("cacher");
+            })
+      })
+
+    </script>
+</body>
+</html>

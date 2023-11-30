@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 14</title>
+    <style>
+        li{
+            width: 150px;
+            margin-top: 10px;
+        }
+        .italique{
+            font-style: italic;
+        }
+     
+    </style>
+</head>
+<body>
+
+    <ul>
+      <li class="italique">Elément de style 1</li>
+      <li class="italique">Elément de style 2</li>
+      <li>Elément de style 3</li>
+      <li class="italique">Elément de style 4</li>
+      <li>Elément de style 5</li>
+      <li class="rr">Elément de style 6</li>
+      <li class="gras">Elément de style 7</li>
+    </ul>
+
+    <script>
+      $(document).ready(function(){
+        $("li[class]").css("border", "1px solid black");
+        $("li[class='rr']").css("background", "#9cf");
+      })
+
+    </script>
+</body>
+</html>

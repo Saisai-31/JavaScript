@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 13</title>
+    <style>
+      .hidden{
+        display: none;
+      }
+      div{
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        float: left;
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <!-- &lt;div&gt; est une entité HTML appelée une entité de caractère. Elle est utilisée pour représenter les caractères < et > dans le langage HTML.utiliser les entités de caractères &lt; pour < et &gt; pour >. -->
+    <p><button>Montrer les boites &lt; div&gt;cachée</button></p>
+    <div class="box">&nbsp;</div>
+    <div class="hidden">&nbsp;</div>
+    <div class="hidden">&nbsp;</div>
+    <div class="hidden">&nbsp;</div>
+    <div class="box">&nbsp;</div>
+
+    <ul>
+      <li class="italiqie">Elément de style 1</li>
+      <li class="italiqie">Elément de style 2</li>
+      <li>Elément de style 3</li>
+      <li class="italiqie">Elément de style 4</li>
+      <li>Elément de style 5</li>
+    </ul>
+
+    <script>
+        // $(document).ready(function(){
+        //      $("button").click(function(){
+        //          $("div:hidden").css("background", "#9cf").show();           
+        //      });
+        //  });
+
+        $(document).ready(function(){ //$(document).ready() : Cela garantit que le code JavaScript est exécuté une fois que le DOM (la structure de la page HTML) est entièrement chargé.
+            let divsCacheesVisibles = false;// qui stocke l'état actuel des divs cachées. Initialement, on les considère comme invisibles (false).
+
+            $("button").click(function(){ // C'est un gestionnaire d'événements jQuery qui réagit au clic sur le bouton.
+                if (divsCacheesVisibles) {  // Cette structure conditionnelle vérifie si les divs cachées sont visibles ou non.
+                    $("div.hidden").hide(); //Si les divs cachées sont visibles, cette ligne les cache en utilisant la méthode .hide() de jQuery.
+                } else {
+                    $("div.hidden").css("background", "#9cf").show();//Si les divs cachées ne sont pas visibles, cette ligne change leur fond en bleu clair et les affiche à l'aide des méthodes .css() pour changer le style et .show() pour les rendre visibles.
+                }
+                divsCacheesVisibles = !divsCacheesVisibles;//À la fin de la fonction de clic, cette ligne inverse l'état de divsCacheesVisibles. Donc, s'ils étaient visibles, ils seront cachés et vice versa lors du prochain clic.
+            });
+       });
+
+    </script>
+</body>
+</html>

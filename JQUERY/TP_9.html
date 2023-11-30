@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 09</title>
+    <style>
+       p{
+        width: 150px;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Elément de liste 1</li>
+        <li>Elément de liste 2</li>
+        <li>Elément de liste 3</li>
+        <li>Elément de liste 4</li>
+        <li>Elément de liste 5</li>
+    </ul>
+   
+    <script>
+        $(document).ready(function(){
+            $("li:lt(4)").css("background", "#9cf"); //Sélection de facon cibler les éléments choisis par leur position
+        });
+
+    </script>
+</body>
+</html>
