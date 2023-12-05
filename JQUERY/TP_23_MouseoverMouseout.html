@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 23</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <p>Survoler ce texte avec le pointeur de la souris</p>
+    <p>Faites la même chose ici</p>
+
+    <script>
+        $(document).ready(function(){
+            $("p").mouseover(function(){
+               $(this).css({"background-color" : "#9cf", "font-style" : "italic"}); 
+            });  
+            $("p").mouseout(function(){
+               $(this).css({"background-color" : "", "font-style" : ""}); 
+            });      
+        });
+    </script>
+</body>
+</html>

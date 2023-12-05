@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 24</title>
+    <style>
+        #boite1, #boite2{
+            position: absolute;
+            width: 80px;
+            height: 50px;
+            padding: 4px;
+            border: 2px solid #000;
+        }
+        #boite1{
+            top: 20px;
+            left: 20px;
+            background-color: #9cf;
+        }
+        #boite2{
+            top: 65px;
+            left: 50px;
+            background-color: #fff;
+        }
+        p{
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="boite1">
+        <p>z-index 1</p>
+    </div>
+    <div id="boite2">
+        <p>z-index 2 </p>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#boite1").mouseover(function(){
+                $(this).css('z-index', '10');
+            })
+            $("#boite1").mouseout(function(){
+                $(this).css('z-index', '');
+            })
+        });
+    </script>
+</body>
+</html>

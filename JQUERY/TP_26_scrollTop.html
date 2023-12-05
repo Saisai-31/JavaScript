@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 26</title>
+    <style>
+       div{
+        position: relative;
+        width: 250px;
+        height: 130px;
+        border: 1px solid black;
+        margin-top: 10px;
+        padding: 3px;
+        font-size: 0.9em;
+        overflow: auto;
+       }
+       p{
+        margin: 2px;
+        width: 225px;
+        text-align: justify;
+       }
+    </style>
+</head>
+<body>
+    <button id="go">Aller au paragraphe 2</button>
+    <button id="reset">Revenir à l'affichage initial</button>
+    <div class="demo">
+        <p>
+            <strong>Paragraphe 1 : </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta tempore ipsum assumenda harum reiciendis consequatur, voluptatum modi. Aliquam ducimus accusantium sed provident similique cum id amet iure qui tenetur!
+        </p>
+        <p>
+            <strong>Paragraphe 2 : </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam voluptatem aut quidem? Perspiciatis saepe sunt dolor fuga omnis voluptas fugit! Dignissimos debitis consectetur in, ducimus assumenda aspernatur illum incidunt cum.
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $("#go").click(function(){
+            $("div").scrollTop(148);
+          })
+          $("#reset").click(function(){
+            $("div").scrollTop(0);
+          })
+        });
+    </script>
+</body>
+</html>

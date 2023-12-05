@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 27</title>
+    <style>
+       p{
+        font-size: 1em;
+       }
+    </style>
+</head>
+<body>
+    <input type="button" value="Plus grand" id="plus">
+    <input type="button" value="Plus petit" id="moins">
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur delectus earum reprehenderit beatae consectetur inventore eveniet nam, reiciendis dignissimos quia corporis nesciunt debitis excepturi, nihil minima quis et blanditiis laborum!
+    </p>
+    
+
+    <script>
+        $(document).ready(function(){
+            $("input").click(function(){
+                var texte = $("p");
+                var taille = texte.css("fontSize");
+                var nombre = parseFloat(taille, 10)
+                var unite = taille.slice(-2);
+                if(this.id=="plus"){
+                    nombre *= 1.2;
+                }else if(this.id=="moins"){
+                    nombre /= 1.2;
+                };
+                texte.css("fontSize", nombre, +unite);
+            });
+        });
+    </script>
+    
+    </script>
+</body>
+</html>

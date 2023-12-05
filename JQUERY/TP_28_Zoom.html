@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 28</title>
+    <style>
+       body{
+        margin: 0px;
+        padding: 10px;
+        font: 80% Arial, sans-serif;
+       }
+       h2{
+        clear: both;
+        font-size: 160%;
+        font-weight: normal;
+        margin: 0;
+        padding-bottom: 15px;
+       }
+       a{
+        text-decoration: none;
+        color: black;
+       }
+       ul, li{
+        list-style: none;
+        display: inline;
+        float: left;
+        margin-right: 10px;
+       }
+       img{
+        border: 1px solid black;
+       }
+       #zoom{
+        position: absolute;
+        border: 1px solid #333;
+        background: #333;
+        padding: 3px;
+        display: none;
+        color: #fff;
+       }
+    </style>
+</head>
+<body>
+    <h2>Effet zoom sur les images et <br> affichage des légendes</h2>
+    <ul>
+        <li><a href="ours1.jpg" class="zoom" title="Ours polaire en danger"><img src="ours1.jpg" alt="Ours en danger" width="200"></a></li>
+        <li><a href="ours2.jpg" class="zoom" title="Ours polaire en danger"><img src="ours2.jpg" alt="Ours en danger" width="200"></a></li>
+        <li><a href="ours3.jpg" class="zoom" title="Ours polaire en danger"><img src="ours3.jpg" alt="Ours en danger" width="200"></a></li>
+    </ul>
+    
+    
+
+    <script>
+          this.zoom_image = function () {
+                xOffset = 10;
+                yOffset = 30;
+                $("a.zoom").hover(
+                    function (e) {
+                    this.textes = this.title;
+                    this.title = "";
+                    var legende = this.textes != "" ? "<br />" + this.textes : "";
+                    $("body").append(
+                        "<p id='zoom'><img src=' "+this.href + " ' alt = 'visualisation image' />" + legende + "</p>" );
+                    $("#zoom")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left" , (e.pageX - yOffset) + "px")
+                        .fadeIn("Slow");
+                    $("#zoom img").css({
+                        "width": "600px", // Définissez la largeur maximale souhaitée
+                        "height": "500px" // Définissez la hauteur maximale souhaitée
+                
+                });
+                },
+                function(){
+                    this.title = this.textes;
+                    $("#zoom").remove();
+                });
+                $("a.zoom").mousemove(function(e){
+                    $("#zoom")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left" , (e.pageX - yOffset) + "px")
+                });
+            };
+            $(document).ready(function(){
+                zoom_image();
+            });
+    </script>
+</body>
+</html>
