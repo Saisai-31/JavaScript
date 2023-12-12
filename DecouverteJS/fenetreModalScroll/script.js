@@ -3,7 +3,7 @@ const modal = document.querySelector(".modal-container");
 console.log(modal);
 
 // Je sélectionne le boutton
-const btn = document.querySelector(".btn.success");
+const btn = document.querySelector(".btn-success");
 console.log(btn);
 
 // Je sélectionne le code 
@@ -23,14 +23,17 @@ function displayModal(){
     if(hauteur > 400){
         console.log('Affichage de la modal');
         modal.style.display = "flex";
+
+       
+
     }
 }
 btn.addEventListener('click', function(){
     console.log('icone cliquée');
     // Je rend visible le code
-    modal.style.display = "block";
+    code.style.display = "block";
     //Je rend invisible le boutton
-    modal.style.display = "none";
+    btn.style.display = "none";
 })
 
 icone.addEventListener('click', function(){
