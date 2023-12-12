@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 32</title>
+    <style>
+        #div_toggle{
+            background-color: #9cf;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+        }
+      
+    </style>
+</head>
+<body>
+   <p id="start">Cliquer ici</p>
+   <div id="div_toggle">&nbsp;</div>
+
+    <script>
+         $(document).ready(function(){
+            $("#start").click(function(){
+                $("#div_toggle").toggle("slow");
+            });
+         });
+
+
+    </script>
+</body>
+</html>
