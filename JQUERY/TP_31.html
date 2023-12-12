@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 31</title>
+    <style>
+        ul{
+            margin-left: 12px;
+        }
+        ul.hover_bloc{
+            position: relative;
+            width: 184px;
+            height: 136px;
+            padding: 16px;
+            list-style: none;
+            font: 1.4em Arial, sans-serif;
+            text-align: justify;
+            color: black;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+        ul.hover_bloc li img{
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="hover_bloc">
+        <li><img src="parc_ecole.jpg" alt="">Parc élolien off-shore le plus important de la mer du nord au Danemark</li>
+    </ul>
+
+    <script>
+         $(document).ready(function(){
+           $("ul.hover_bloc li").hover(function(){
+            $(this).find('img').animate({left: '300px'}, {duration:500});
+           },
+           function(){
+            $(this).find('img').animate({left: '8px'}, {duration:500});
+           }
+           );
+         });
+
+
+    </script>
+</body>
+</html>

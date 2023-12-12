@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 30</title>
+    <style>
+        .accord{
+            width: 250px;
+            border-bottom: 1px solid black;
+        }
+        .accord H3{
+            margin: 0;
+            background: #9cf url(arrow.gif) no-repeat right -51px;
+            padding: 7px 15px;
+            font: bold 0.9em Arial, sans-serif;
+            border: 1px solid black;
+            border-bottom: none;
+            cursor: pointer;
+        }
+        .accord H3:hover{
+            background-color: #ccecff;
+        }
+        .accord p{
+            margin: 0;
+            font: 0.9em Arial, sans-serif;
+            padding: 10px 15px 10px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="accord">
+        <h3>Hypertext Markup Language</h3>
+        <p>
+            - Version 3.2<br> 
+            - Version 4.1<br> 
+            - Version 5
+        </p>
+        <h3>Cascading Style Sheets</h3>
+        <p>
+            - Version 2<br> 
+            - Version 2.1<br> 
+            - Version 3
+        </p>
+        <h3>JavaScript</h3>
+        <p>
+            - DOM<br> 
+            - Ajax<br> 
+            - jQuery
+        </p>
+    </div>
+
+    <script>
+         $(document).ready(function(){
+            $(".accord p").hide();
+            $(".accord h3").on("click", function(){
+                $(this).next("p").slideToggle('slow').siblings("p:visible").slideUp("slow");
+                $(this).toggleClass("active");
+                $(this).siblings("h3").removeClass("active");
+            });
+         });
+
+//  $(document).ready(function(){...});: Cette ligne attend que le document HTML soit complètement chargé avant d'exécuter le code à l'intérieur. Cela garantit que le code JavaScript ne s'exécute pas avant que la structure HTML ne soit prête.
+
+// $(".accord p").hide();: Cela cache tous les éléments <p> (paragraphe) qui sont des enfants d'un élément avec la classe "accord". Il s'agit probablement des contenus de chaque section qui doivent être masqués initialement.
+
+// $(".accord h3").on("click", function(){...});: Cela attache un gestionnaire d'événement de clic à tous les éléments <h3> qui sont des enfants d'un élément avec la classe "accord". Donc, chaque fois qu'un titre de section est cliqué, une fonction est déclenchée.
+
+// $(this).next("p").slideToggle('slow').siblings("p:visible").slideUp("slow");: Quand un titre de section est cliqué, cette ligne fait plusieurs choses :
+
+// $(this).next("p").slideToggle('slow'): Elle sélectionne le paragraphe <p> suivant le titre <h3> cliqué et fait un effet de glissement (slideToggle) pour afficher ou masquer ce paragraphe lentement.
+// siblings("p:visible").slideUp("slow"): En même temps, elle cherche les autres paragraphes visibles qui sont des frères du paragraphe actuel (ceux qui sont déjà ouverts) et les fait glisser vers le haut pour les fermer.
+// $(this).toggleClass("active");: Cela ajoute ou supprime la classe "active" sur l'élément <h3> actuellement cliqué. Cette classe est souvent utilisée pour appliquer des styles différents pour indiquer quelle section est ouverte.
+
+// $(this).siblings("h3").removeClass("active");: Cela retire la classe "active" des autres éléments <h3> qui sont des frères du titre actuellement cliqué. Cela garantit que seulement un seul titre peut avoir la classe "active" à la fois, permettant de suivre visuellement quelle section est ouverte.
+
+// En résumé, ce code crée un système d'accordéon où le contenu de chaque section est masqué au départ, mais lorsqu'un titre de section est cliqué, son contenu s'affiche et le contenu des autres sections se referme. De plus, le titre de la section active obtient une classe "active" pour le styliser différemment et les autres titres perdent cette classe.
+
+    </script>
+</body>
+</html>
