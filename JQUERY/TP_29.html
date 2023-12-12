@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TP 29</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>La cop 28 se terminera sur quelle clause ?</h2>
+    <p>
+        Organisée par les Émirats arabes unis (EAU), la 28e Conférence des Parties sur les changements climatiques (COP28) se tient à Dubaï du 30 novembre au 12 décembre 2023. Un temps fort des négociations climatiques puisqu’elle doit établir le premier bilan mondial des engagements (Global Stocktake) pris par les États à Paris en 2015 lors de la COP21.
+    </p>
+    <p>
+        <b>Bâtiment</b> 
+        Le Buildings Breakthrough a été officiellement lancé par la France et le Maroc le mercredi 6 décembre. L'initiative est l’aboutissement de l’appel franco-marocain lancé lors de la COP27 de Charm el-Cheikh en 2022. Elle a pour but de renforcer la coopération intergouvernementale et fixe l’objectif de zéro émission de gaz à effet de serre d’ici 2030 pour le secteur du bâtiment.
+    </p>
+    <p>
+        Diplomatie féministe
+    La France a rejoint, lundi 4 décembre, le partenariat sur le genre et la transition juste, lancé par la présidence COP28, et qui vise à soutenir l’accès des femmes aux emplois de la transition énergétique. La France a notamment réaffirmé son engagement pour garantir les droits et la santé sexuels et reproductifs partout dans le monde, y compris dans les contextes
+    </p>
+    <div>
+        <a class="suite" href="#">Afficher la suite...</a>
+    </div>
+
+    <script>
+         $(document).ready(function(){
+            var $paragraphe2 = $("p:eq(1)");
+            var $paragraphe3 = $("p:eq(2)");
+            $paragraphe2.hide();
+            $paragraphe3.hide();
+            $("a.suite").on("click", function(){
+                if($paragraphe2.is(":hidden")&& $paragraphe3.is(":hidden")){
+                    $paragraphe2.show("slow");
+                    $paragraphe3.show("slow");
+                    $(this).text("Masquer la suite...");
+                }else{
+                    $paragraphe2.hide("slow");
+                    $paragraphe3.hide("slow");
+                    $(this).text("Afficher la suite...");
+                    return false;
+                }
+            });
+         });
+
+    </script>
+</body>
+</html>
