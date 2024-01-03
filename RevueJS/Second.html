@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="monchamp">
+        <button onclick="go()">Cliquez ici</button>
+    </form>
+    <br>
+    <button id="a" onclick="off()">A</button>
+    <button id="b">B</button>
+    <br>
+    Etes vous majeur ? 
+    <button id="c" onclick="reveler()">Oui</button>
+    <button id="d" onclick="cacher()">Non</button>
+    <button id="e" hidden="">Continuer</button>
+
+    <!-- <p id="y" hidden="">Coucou mon ami</p> -->
+
+    <script>
+        //Récupérer la valeur entrée dans le champs saisie
+        function go(){
+            let saisie = document.getElementById("monchamp");
+            alert(saisie.value);
+        }
+    </script>
+    <script>
+        //Désactiver un élément HTML à l'aide de JS
+        function off(){
+            var cible = document.getElementById("a");
+            var cible = document.getElementById("b");
+            cible.setAttribute("disabled", true);
+        }
+    </script>
+    <script>
+        //Supprimer un attribut HTML en JS
+        function reveler(){
+            var cibles = document.getElementById("e");
+            // var cibles2 = document.getElementById("y");
+            cibles.removeAttribute("hidden");
+            // cibles2.removeAttribute("hidden");
+            
+
+        }
+        function cacher(){
+            var cibles = document.getElementById("e");
+            cibles.setAttribute("hidden", "true");
+        }
+
+    </script>
+
+</body>
+</html>

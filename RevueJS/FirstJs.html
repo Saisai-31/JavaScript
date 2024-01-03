@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevueJs</title>
+</head>
+<body>
+    <button onclick="calcul(12)">Calculer</button>
+
+
+    <script>
+        //Les variables
+
+        var ma_variable; //déclaration de variable
+        ma_variable = 5; //affectation de valeur à la variable
+        alert(ma_variable); // affichage dans une boite de dialogue (popup), avec 1 bouton ok
+        confirm("Voulez vous confirmer");//affichage d'une boite de dialogue (popup) avec 2 boutons ok et annuler
+        console.log(ma_variable);
+        //document.write(ma_variable);
+
+
+        //Manipouler les variables
+
+        let a = "Bonjour";
+        let b = "à tous";
+        alert(a+" "+ b);//Concaténation
+
+        console.log(Math.sqrt(10));//calculer la racine carré de 10, avec des fonctions 
+        console.log(Math.pow(10, 2));//calculer le carré d'un nombre
+        console.log(Math.round(15.8));//arrondir un nombre
+        console.log(Math.PI);//calculer le PI
+        console.log(Math.round(Math.PI));//PI arrondi
+        console.log(Math.max(45, 68)); //affiche le maximum
+
+        //Type de variable
+        let maV = "Bonne année";
+        console.log(typeof maV); // Affiche le type d'une variable
+        maV = Number(maV);
+        console.log(typeof maV);// convertir une variable de type string en typenumber
+        maV = String(maV);
+        console.log(typeof maV);
+
+        //Donner les instruction en JS
+        //Les fonctions
+        function ma_fonction(a, b){
+            var calcul = a * b + 1;
+            return calcul
+        }
+        alert(ma_fonction(12,12));
+
+        function ma_fonction2(a, b){
+            var a = prompt("Entrer un nombre");
+            var b = prompt("Entrer un nombre");
+            calculer = a * b;
+            alert(calculer);
+        }
+        ma_fonction2();
+
+        //Exemple de callback de fonction anonyme
+        setTimeout(function(){
+            alert("Bonne année 2024 !");
+        }, 1000);
+
+        //Interagir avec le HTML
+        function calcul(){
+            let d = parseInt(prompt("Entrer d"));
+            alert(d + 5);
+        }
+
+        //setTimeout(ma_fonction2, 4000);
+
+
+    </script>
+    
+</body>
+</html>

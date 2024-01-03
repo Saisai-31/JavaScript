@@ -1,0 +1,23 @@
+h1{
+    color: violet;
+}
+h2{
+    color: pink;
+}
+p{
+    text-align: center;
+    border: 1px solid red;
+}
+
+ol{
+  
+  list-style-type: thai;
+}
+
+nav{
+    float: left;
+    border: 1px solid black;
+}
+header{
+    border: 1px solid red;
+}

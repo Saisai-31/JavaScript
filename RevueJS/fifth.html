@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Obtenir la date actuelle
+        var ajd = new Date();
+        alert(ajd);
+    </script>
+
+    <script>
+        //Calculer une différence entre les 2 dates
+        var adj1 = new Date();
+        var date = new Date(2001, 1, 12);
+        alert((date - adj1) / (1000 * 60 * 60 * 24 * 30 * 12));
+        console.log((date - adj1) / (1000 * 60 * 60 * 24 * 30 * 12));
+    </script>
+
+    <script>
+        //test de condition simple
+        var x = 5;
+        if(x >= 0){
+            alert("x est positif");
+        }else{
+            alert("x est négatif");
+        }
+    </script>
+
+    <script>
+        var z = 5;
+        if(z >= 0 && z<= 5){
+            alert(z + " est compris entre 0 et 5");
+            console.log(z + " est compris entre 0 et 5");
+        }else{
+            alert("ne fait pas partie de cet interval");
+            console.log("ne fait pas partie de cet interval");
+        }
+    </script>
+
+    <script>
+        var figure = "rectangle";
+        switch(figure){
+            case "triangle" :
+                alert("Cette figure à 3 côtés");
+                break;
+            case "carré" :
+                alert("Cette figure à 4 côtés");
+                break;
+            case "Pentagone" :
+                alert("Cette figure à 5 côtés");
+                break;
+            default :
+                alert("Je ne connais pas ette figure")
+        }
+    </script>
+
+
+
+</body>
+</html>

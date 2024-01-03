@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="image()">Ajouter une image</button>
+
+    <script>
+        //Créer un objet simple
+
+        //JavaScript peut manipuler le DOM pour lire le contenu d'une page HTML mais aussi pour le modifier. Le langage permet ainsi d'ajouter, changer ou supprimer des éléments HTML. La manière la plus basique de la faire est d'utiliser document.write(), dont le paramètre est du code HTML.
+        //Lorsque cette instruction est exécutée, JS ajoute du code à la page web. 
+        //Toutefois cette instruction est assez sommaire et écrase tout le contenu présent sur une page avant son exécution. Le DOM offre heureusement des outils plus élaborés pour créer ou supprimer des balises HTML. Ils sont toutefois plus complexe à utiliser que document.write().
+        //Le DOM représente une page web sous forme d'un arbre. Tout élément d'une page est un noeud (node en anglais). Les noeuds sont liés les uns aux autres par une relation hiérarchique. A l'exception de la racine, chaque noeud à un unique noeud parent. 
+        //Les noeuds <p> et <img> dépendent ainsi du noeud <body>.
+        //Ce sont des noeuds enfants. Les attributs et informations contenues dans chaque noeud sont manipulables par JavaScript. Ainsi, la méthode getElementById() accède au contenu du noeud dont l'id lui est passée en paramètre. 
+        //JavaScript procède en 3 étapes pour ajouter un noeud dans le DOM. Le noeud est créé à l'aide de la méthode document.createElement(). Cette méthode prend pour paramètre le nom de la balise à ajouter, comme img ou a. Ensuite il est possible de préciser les paramètres de l'élément à l'aide de la méthode setAttribute(). Elle prend 2 paramètres : 
+        // - le nom de l'attribut et sa valeur. Ces commandes permettent de créer un noeud mais ne l'intègre pas à la page. L'ajout d'un noeud se fait à l'aide de la méthode appendChild(). Cette méthode permet d'ajouter le noeud qui vient d'être créé en tant que noeud enfant d'un élément déjà existant dans la page. 
+
+        document.write("<p>Un premier paragraphe</p>");
+        document.write("<p>Un second paragraphe</p>");
+    </script>
+    <script>
+        function image(){
+            var noeud = document.createElement("img");
+            noeud.setAttribute('src', 'lionrast.jpg');
+            document.body.appendChild(noeud);
+
+        }
+    </script>
+
+    <!-- Un élément HTML utile lors de la manipulation du DOM est la balise <div></div>. Cette dernière n'est pas visible par les internautes. son role est de délimiter les éléments d'une page web. Elle peut être utilisée avec la méthode appendChild() pour insérer un noeud à un endroit précis.  -->
+    <script>
+        function image2(){
+            var noeud = document.createElement("img");
+            noeud.setAttribute("src", "quel-est-mon-poids-ideal.jpg");
+
+            var divcible = document.getElementById("cible");
+            cible.appendChild(noeud);
+        }
+    </script>
+    <p>Paragraphe A</p>
+    <div id="cible"></div>
+    <p>Paragraphe B</p>
+    <button onclick="image2()">Ajouter une image</button>
+
+    <!-- Supprimer un balise d'une paragraphe
+    JS permet enfin de retirer des noeuds du DOM, ce qui a pour effet d'effacerdes éléments d'une page. La méthode la plus simple pour y parvenir est removeChild(). Son paramètre est le noeud qui doit être supprimé. Elle est utilisée depuis le noeud parent, ce qui nécessite de l'identifier auparavant avec la méthode getElementById(). -->
+
+    <script>
+        function suppr(){
+            var noeudParent = document.getElementById("parent");
+            var noeudEnfant = document.getElementById("enfant");
+            noeudParent.removeChild(noeudEnfant);
+        }
+    </script>
+    <div id="parent">
+        <img src="digital-binary-code-background-technology-1591531.jpg" alt="Code Binaire" id="enfant" width="350" height="350">
+    </div>
+    <button onclick="suppr()">Supprimer</button>
+    
+
+</body>
+</html>

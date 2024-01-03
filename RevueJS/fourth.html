@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JS fait un usage intensif du concept d'objet. Il appartient ainsi à la famille des langages de programmation orientée objet appelée POO. Ce concept s'oppose à celui de procédural. L'unité de base JS est l'objet et pratiquement tout élément JS est un objet. 
+    Au 1er abord, les objets en JS sont similaires aux variables Ils contiennet aussi des données. A la différence des variables ordinaires, ils peuvent cependant contenir plusieurs valeurs simultanément. 
+    Les valeurs contenus dans un objet sont alors appelées propriétés.  -->
+
+    <script>
+        var eleve = {
+            prenom: "Sylvain",
+            mail: "sylvain@gmmail.com",
+            moyenne: 15
+        };
+    </script>
+
+    <!-- Ici nous avons créé un objet qui représente un élève. Ce dernier a un nom, une edresse mail et une moyenne.
+    Ici, la création de l'objet nous permet de structurer ces informations de manière cohérente et claire. 
+    Créer un tableau ou 3 variables aurait été nettement moins pratique à manipuler.
+    Nous avons créé un objet de manière littérale. Pour ce faire, nous avons utilisé des règles syntaxtiques légèrement différentes de celle de JS.
+    Ces dernières portent le nom de JavaScript Objet Notation ou JSON. Ainsi, les valeurs des propriétés sont assignés à l'aide de l'opérateur : et sont placées entre une paire d'accolades. Ici, les 2 premières propriétés contiennent des chaines de texte mais il est également possible d'entrer des valeurs, comme c'est le cas avec la moyenne. 
+
+    Cette manière de créer un objet est pratique mais limitée. Elle permet en effet de ne crééer qu'un seul objet à la fois. 
+    Lorsqu'il est souhaitable de créer plusieurs objets qui suivent une même structure, le développeur créé d'abord un constructeur qui sera appelé autant de fois que nécessaire. Les objets créés à l'aide d'un constructeur portent le nom d'instance.  -->
+
+    <script>
+        function eleve_(prenom_, mail_, moyenne_){
+            this.prenom_ = prenom_;
+            this.mail_ = mail_;
+            this.moyenne_ = moyenne_;
+        }
+        var eleve1 = new eleve_("Bob", "bob@gmail.com", 10);
+        var eleve2 = new eleve_("Elise", "elise@yahoo.fr", 15);
+
+        // En JS, un constructeur est une fonction. Les propriétés de l'objet créé sont placées dans la fonction et son procédées du mot clé this. Ce dernier (this) indique la présence d'une propriété en les distinguant par exemple d'une variable. La création d'une instance se fait par appel de la fonction précédé du mot clé new. 
+        // L'utilisation d'un constructeur permet au développeur de réutiliser les modèles des objets qu'il créé. Il peut-etre interessant de noter qu'en JS le constructeur d'un objet est une propriété de ce dernier, nommée construtor. 
+        // Ici le constructeur est utilisé pour crer 2 instances de l'objet élève. 
+
+        //Manipuler les propriété d'un objet
+        alert(eleve1.prenom_);
+
+        eleve1.prenom_ = "Paul";
+        alert(eleve1.prenom_);
+
+        alert(eleve2["moyenne_"]);
+        eleve2["moyenne_"] += 2;
+        alert(eleve2["moyenne_"]);
+
+        // La manière la plus usuelle d'accéder à une propriété d'un objet est d'utiliser un point. Cer dernier est alors suivi du nom de la propriété à manipuler?  Il est pas possible de ne traiter qu'une seule propriété à la fois. Cette derniere s'utilise comme une varaible ordinaire. 
+        // Il est aussi possible de placer le nom de la propriété que l'on souhaite manipuler entre crochets. cette manière de faire est similaire à une utilisation d'un tableau. 
+
+        // Les objets complexes peuvent contenir des sous proprétés.
+
+    </script>
+
+        <!-- Un objet avec une méthode  -->
+    <script>
+        function etudiant(prenom_Et, mail_Et, moyenne_Et){
+            this.prenom_Et = prenom_Et;
+            this.mail_Et= mail_Et;
+            this.moyenne_Et = moyenne_Et;
+            this.saluer = function(){
+                alert("Je m'appelle " + this.prenom_Et);
+                console.log("Je m'appelle " + this.prenom_Et);
+            };
+        }
+        var etudiant1 = new etudiant("Pierre", "pierre@coco.fr", 20);
+        etudiant1.saluer();
+        
+    </script>
+
+
+
+</body>
+</html>
