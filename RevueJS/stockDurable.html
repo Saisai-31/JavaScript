@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocker durablement des informations</title>
+</head>
+<body>
+    <!-- Stocker les informations durablement.
+    Le protocole HTTP ne permet que de transférer des informations et n'est pas capable des les stocker.
+    Une page HTML ne peux ainsi pas enregistrer des informations comme pourrait le faire ue base de données.
+    Cette caractéristique fait du HTTP un protocole dit stateless, c'est à dire sans état. 
+    Cette limitation à été rapidement contournée et JavaScript propose 2 méthodes pour stoocker de l'information côté client : les cookies et le stockage local.
+    * Les cookies * 
+    Les cookies sont historiquement la forme la plus ancienne de stockage de donnée côté client. Leur usage remonte à 1984 et à été popularisé par le navigateur Netscape.
+    Un cookie est un fichier qui contient du texte, il peut etre manipulé aussi bien côté client que coté serveur, ce qui en fait un outil très pratique pour stocker les informations et les transmettre ultérieurment. 
+    Un cookie est identifié par un nom et est associé à un site donné, nommé domaine. Il est la plupart du temps créé par le serveur et est envoyé à un client. Il est toutefois possible de manipuler des cookies côté client. 
+    Un cookie stocke des informations sous la forme d'une chaine de caractère et peut contenir plus de 4096 bits de données, ce qui est relativement peut (environ 4500 caractères).
+    Par défaut, un cookie disparait lorsqu'un utilisateur ferme la page à laquelle il est associé. Il est toutefois possible de définir une date lointaine d'expiration. 
+
+    Les cookies permettent d'identifier les visiteurs d'une application notamment en enregistrant des informations personnelles (nombre de visites, date de connexion, langue, etc...). c'est pourquoi ils jouissent d'une mauvaise réputation et peuve être perçu comme une menace pour la vie privée des internautes. Cela signifie que les cookies ne doivent pas être utilisées pour stocker ou transmettre des informations sensibles. 
+
+    La lecture et l'écriture d'un cookie en JS se font à l'aide d'une seule instruction : document.cookie.
+    Cette derniere permet de manipuler les cookies d'une page web comme s'il s'agissait d'un objet JS. Il est possible de lui assigner une valeur et de la lire.
+    -->
+
+    <script>
+        document.cookie = "Ceci est un cookie";
+        function lirecookie(){
+            var cookie = document.cookie;
+            alert(cookie);
+        }
+
+        // Il est possible de structurer les informations contenues dans un cookies en suivant par exemple un schéma clé-valeur mais il ne s'agit pas d'une obligation.IlLes cookies peuvnt contenir des paramètres dont le plus important est la date d'expiration. La définir permet ainsi de conserver les informations dans le temps. Il est également possible d'effacer un cookie en lui assigant une date d'expiration passée. Cette manipulation peut toutefois ne ps fonctionner sur certain browser (navigateur) qui bloquent l'éffacement des cookies expirés.
+    </script>
+    <button onclick="lirecookie()">Lire</button>
+
+    
+
+    
+</body>
+</html>

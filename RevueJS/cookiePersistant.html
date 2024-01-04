@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies persistants</title>
+</head>
+<body>
+    <button onclick="actualiser()">actualiser</button>
+    <button onclick="lire()">lire</button>
+    <button onclick="effacer()">effacer</button>
+
+    <script>
+        // Je crée trois fonctions pour manipuler le cookie persistant
+
+        // J'enregistre dans le cookie la date actuelle
+        function actualiser() {
+            var i =0;
+            var date = new Date();
+            document.cookie = "date = " + date.toString() + "; expire = Thu, 04 Jan 2024 00:00:00 UTC";
+        }
+
+        // J'assigne une dta epassée au cookie pour permettre de la supprimer
+        function effacer() {
+            document.cookie = "; expire = Thu, 01 Jan 1970 00:00:000 UTC";
+
+        }
+
+        // J'affiche le contenu du cookie
+        function lire() {
+            var cookie = document.cookie;
+            alert(cookie);
+            console.log(cookie);
+        }
+    </script>
+
+
+</body>
+</html>
