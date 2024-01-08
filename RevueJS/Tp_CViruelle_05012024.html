@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe virtuelle du 05/01/2024</title>
+</head>
+<body>
+    
+    <script>
+        // Créez un cookie nommé "prenom" avec la valeur "John".
+        // Lisez la valeur du cookie "prenom" et affichez-la dans la console.
+        document.cookie = "prenom=John";
+        function lirecookie(){
+            var prenom = document.cookie;
+            console.log(prenom);
+        }
+        lirecookie();
+
+        // Supprimez le cookie "prenom" créé dans le Exo 1.
+        // Vérifiez dans la console si le cookie a été correctement supprimé.
+        document.cookie = "prenom=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        console.log(document.cookie);
+
+        // Créez un cookie nommé "sessionID" avec une durée de vie de 1 heure.
+
+        function createCookie(name, value, hours) {
+            // Initialise une variable expires avec une chaîne vide. Cette variable sera utilisée pour stocker la date d'expiration du cookie.
+            var expires = "";
+            //Vérifie si le paramètre hours a été passé à la fonction. Si hours a une valeur (différente de zéro, null ou undefined), le code à l'intérieur des accolades sera exécuté.
+            if (hours) {
+            //Crée un objet Date qui représente le moment actuel.
+            var date = new Date();
+            //Ajoute le nombre d'heures spécifié (multiplié par le nombre de millisecondes dans une heure) à la date actuelle, mettant à jour la date d'expiration du cookie.
+            date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+            // Stocke la date d'expiration formatée dans la variable expires. Cette date est convertie en une chaîne de caractères représentant la date et l'heure en temps universel coordonné (UTC), prête à être utilisée dans le cookie.
+            expires = "; expires=" + date.toUTCString();
+            }
+            //Assemble la chaîne du cookie en concaténant le nom, la valeur, la date d'expiration et le chemin du cookie. Cette chaîne est ensuite assignée à document.cookie, créant ainsi le cookie.
+            // path=/ signifie que le cookie est valide sur toutle site
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        // C'est un appel à la fonction createCookie, où "sessionID" est le nom du cookie, "valeurDuCookie" est la valeur du cookie, et 1 représente la durée de validité en heures. Ce cookie sera donc valide pendant une heure à partir de l'heure actuelle.s
+        createCookie("sessionID", "valeurDuCookie", 1);
+        
+
+        // Stockez la valeur "42" avec la clé "réponse" dans le localStorage.
+        localStorage.setItem('réponse', '42');
+
+        // Récupérez la valeur stockée et affichez-la dans la console.
+        var stock = localStorage.getItem('réponse');
+        console.log(stock);
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

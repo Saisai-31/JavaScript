@@ -17,13 +17,12 @@
         function actualiser() {
             var i =0;
             var date = new Date();
-            document.cookie = "date = " + date.toString() + "; expire = Thu, 04 Jan 2024 00:00:00 UTC";
+            document.cookie = "date=" + date.toString() + "; expires=Thu, 09 Jan 2024 00:00:00 UTC";
         }
 
-        // J'assigne une dta epassée au cookie pour permettre de la supprimer
+        // J'assigne une date passée au cookie pour permettre de la supprimer
         function effacer() {
-            document.cookie = "; expire = Thu, 01 Jan 1970 00:00:000 UTC";
-
+            document.cookie = "date=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
         }
 
         // J'affiche le contenu du cookie
