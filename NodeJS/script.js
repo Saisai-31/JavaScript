@@ -1,3 +1,1 @@
-console.log("coucou les amis");
-
-var app = express();
+console.log("coucou les amis !");

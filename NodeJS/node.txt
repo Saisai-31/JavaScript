@@ -1,61 +1,103 @@
-Jusque là, nous avons utilisé JavaScript côté client. A partir de maintenant, il est sera à utiliser coté serveur. 
-Si JavaScript était initialement concu pour fonctionner avec des pages web, des outils plus récents ont élargi ses capacités. 
-NodeJS permet ainsi de l'utiliser pour créer des applications. 
+Jusque-là, nous utilisions JavaScript côté client. À partir de maintenant, il sera utilisé côté serveur.
+Si JavaScript était initialement conçu pour fonctionner avec des pages web, des outils plus récents ont
+élargi ses capacités. Notre JavaScript permet de l'utiliser pour créer des applications web complexes.
 
-Fonctionnement d'un serveur
+Fonction d'un serveur :
 
-1/ Comprendre l'architecture client-serveur. 
-Le web repose sur une architecture duale : un client se connecte à un serveur puis ils échangent des informations. Chaque aacteurs est identifié par sa fonction, qui lui est propre : le client envoie des requêtes que le serveur va traiter avant de renvoyer sa réponse.
+Comprendre l'architecture client-serveur.
 
-Le terme client désigne tout logiciel capable d'envoyer des requêtes. Exemple : postman. Cette définition large englobe notamment les navigateurs web qui permettent à un utilisateur de charger et d'afficher des pages web, les applications mobiles ou certains jeux en ligne comme World of Warcraft sot égamlement des clients. 
+Le web sur une architecture duale : un client se connecte à un serveur, puis ils échangent des informations.
+Chaque acteur est identifié par sa fonction qui lui est propre. Le client envoie des requêtes que le serveur 
+va traiter avant de renvoyer une réponse.
 
-Par analogie, le serveur est le logiciel qui traite les requêtes du client renvoit une réponse. Par extension, le terme serveur est souvent utiliser pour désigner les machines qui exécutent ce type de programme.
-Les requêtes sont des messages qui contiennent des instructions. Les deux requêtes les plus utilisées sont GET et POST.
+Le terme client désigne tout logiciel capable d'envoyer des requêtes, par exemple : Postman. Cette définition 
+large englobe notamment les navigateurs web qui permettent à un utilisateur de charger et d'afficher des pages
+web, les applications mobiles ou certains jeux en ligne comme World of Warcraft, qui sont également des clients.
 
-Le client envoie des requêtes GET à un serveur lorsqu'il souhaite accéder à une page web (ressource). Ainsi lorqu'un internaute clique sur un lien hypertexte, son navigateur web envoie une requête GET à un serveur. Celle-ci contient notamment l'adresse de la page souhaitée. Ainsi, la requête POST est utilisée pour envoyer le contenu d'un formulaire vers un serveur. 
-Un formulaire en HTML est un contenu entre une paire de balise <form>. Ce dernier contient au moins un élément avec lequel l'utilisateur interagit et un bouton de validation. Un clic sur ce dernier va déclencher l'envoi d'une requête POST contenant la valeur entrée.
-Celle-ci est visible avec un logiciel comme  (Outil Developper du navigateur).
+Par analogie, le serveur est le logiciel qui traite les requêtes du client et renvoie une réponse. Par extension,
+le terme serveur est souvent utilisé pour désigner les machines qui exécutent ce type de programme. Les requêtes
+sont des messages qui contiennent des instructions. Les deux requêtes les plus utilisées sont les requêtes GET 
+et les requêtes POST.
 
-Le seveur quand a lui recoit les requetes et y répond, la réponse va la plupart du temps contenir une page HTML qui a été  demandée par le client. Il arrive cependant que le client demande des pages qui n'existent pas. Dans ce cas là, la réponse du serveur est un message d'erreur, la fameuse erreur 404. 
-Il existe un typologie des réponses possibles, qu'il n'est pas nécessaire de connaitre pour débuter le codage web.
+Le client envoie des requêtes GET à un serveur lorsqu'il souhaite accéder à une page web (resource). Ainsi, 
+lorsqu'un internaute clique sur un lien hypertexte, son navigateur web envoie une requête GET à un serveur. 
+Celle-ci contient notamment l'adresse de la page souhaitée. De même, la requête POST est utilisée pour envoyer
+le contenu d'un formulaire vers un serveur.
 
+Un formulaire en HTML est contenu entre une paire de balises <form>. Ce dernier contient au moins un élément 
+avec lequel l'utilisateur interagit et un bouton de validation. Un clic sur ce dernier va déclencher l'envoi 
+d'une requête POST contenant la valeur entrée. Celle-ci est visible avec un logiciel comme Firebug (outil 
+Developer du navigateur).
 
-2/ NodeJS pour programmer en JavaScript côté serveur
-Pour concevoir des apllications web, nous avons besoin d'un serveur. Ce dernier prend la forme d'un logiciel qui peut etre installé sur n'importe quel ordinateur pour le rendre capable de traiter des requêtes et d'y répondre. 
-Il existe plusieurs types de logiciel serveur, à l'intar d'Apache ou encore Ngix, le choix est porté sur Node.JavaScript
+Le serveur, quant à lui, reçoit les requêtes et sa réponse va la plupart du temps contenir une page HTML
+qui a été demandée par le client. Il arrive cependant que le client demande des pages qui n'existent pas,
+dans ce cas, la réponse du serveur est un message d'erreur, la fameuse erreur 404. Il existe une typologie
+des requêtes et réponses possibles qu'il n'est pas nécessaire de connaître pour débuter le codage web.
 
-Node, créée en 2009 par Ryan Dahl est un logiciel open source qui permet entre d'autres, de créer des applications web en se servant de serveur HTTP. Bien que très récent à l'échelle de l'histoire informatique, il est aujourd'huipar les plus grandes entreprises du monde. Elles apprécient en particulier sa performance : Node.js est à même de gérer des applications qui connaissent un très fort traffic en consommant très peu de ressources matérielles.
+Node.js pour programmer en JavaScript côté serveur Pour concevoir des applications web, nous avons besoin 
+d'un serveur. Ce dernier prend la forme d'un logiciel qui peut être installé sur n'importe quel ordinateur
+le rendant capable de traiter des requêtes et d'y répondre. Il existe plusieurs types de logiciels serveur,
+à l'instar d'Apache ou encore Nginx. Le choix est porté sur Node.js.
+Node, créé en 2009 par Ryan Dahl, est un logiciel open source qui permet, entre autres, de créer des 
+applications web en servant de serveur HTTP. Bien que très recént à l'echelle de l'histoire informatique 
+il est aujourd'hui utilisé par les plus grandes entreprises du monde. Elles apprécient en particulier sa 
+performance : Node.js est à même de gérer des  applications qui connaissent un trés fort trafic en consommant 
+très peu de ressources matérielles.
 
-Node.js est en outre particulièrement adapté pour découvrir l'environnement web. Il se programme en JavaScript et permet d'obtenir un serveur opérationnel en quelques minutes, sans nécessiciter de réglages complexes. Node.js évolue constament et il existe actuellement en plusieurs version identifiable par un numéro.
+Node.js est, en outre, particulièrement adapté pour le développement web. Il se programme en JavaScript et 
+permet d'obtenir un serveur opérationnel en quelques minutes sans nécessiter de réglages complexes. Node.js 
+évolue constamment et il existe actuellement plusieurs versions identifiables par plusieurs numéros.
 
+3. Installation
 
-3/ Installation 
-    3.1- Installation de Node.js
-    3.2- Installer un module de tierces avec npm
+3.1 Installation de Node.JavaScript
+
+3.2 Installer un module tiers avec npm
 
 L'ultime étape avant de commencer l'utilisation de Node.js est d'installer Express. Il s'agit d'un module
 tiers qui permet, comme son nom l'indique, d'accélérer le développement d'une application en simplifiant
 la programmation de certaines tâches usuelles. Express est notamment utilisé par Netflix. Son installation 
 se fait à l'aide de Node Package Manager (npm). Syntaxe : npm install -g express.
 
+Ce code contient le nécessaire pour créer une application minimaliste avec Node.js.
+ La méthode listen() démarre l'application et s'apparente à une boucle infinie. 
+ Le serveur va attendre indéfiniment les requêtes de clients.
+Si cette application ne fait rien en elle-même, elle permet néanmoins de poser
+ la structure d'une application Node.js. Cette dernière est un fichier JS ordinaire
+  qui contient des fonctions et des variables. Ici, nous nous contentons simplement 
+  d'afficher un message sur l'invite de commande, à l'aide de la méthode log() de 
+  l'objet console.
 
-Ce code contient le necessaire pour créer une application minimaliste avec Node.js. La méthode listen() démarre l'application et s'apparente à une boucle infinie : le serveur va attendte indéfidement les requêtes de clients.
+Démarrer une application Node.js
 
-Si cette application ne fait rien d'elle même, elle permet néanmoins de poser la structure d'une application Node.js Cette dernière est un fichier JS ordinaire qui contient des fonctions et des variables. Ici nous nous contentons simplement d'afficher un message sur l'invite de commande, à l'aide de la méthode log() et l'objet console. 
+Le démarrage se fait à l'aide de l'interface de commande en utilisant la commande 
+node suivie du nom du fichier qu'il faut exécuter.
 
-Démarrer l'application Node.js
+3.3 Envoyer des données avec un serveur
 
-Le démarrage se fait à l'aide de l'interface de commande en utilisant la commande node suivie du nom du fichier qu'il faut éxécuter.
+3.3.1 Le routage
+La première étape de construction d'une application est la création des routes.
+ Une route correspond au chemin qui relie une adresse URL à une ressource, comme 
+ une page web ou une image. Cette dernière est utilisée par le serveur et le client 
+ pour communiquer. Ainsi, lorsqu'un client souhaite charger une page web, il enverra 
+ une requête GET qui contient l'adresse URL de la page souhaitée. Si cette dernière 
+ correspond à une route définie par vous (le dev expert), le serveur lui répondra. 
+Node.js comporte plusieurs fonctions qui permettent de créer des chaînes de texte 
+qui lui sont passées en paramètre.
 
-3.3 Envoyer des données avec un serveur 
+La création d'une route passe ici par l'appel de la méthode get(). Cette dernière 
+prend deux paramètres. Le premier est l'endroit où arriveront les requêtes.
 
-3.3.1 Le routage 
-La 1ere étape de construction d'une application est la création des routes. Une route correspond au chemin qui relie une adresse URL à une ressource, comme une page web ou une image. Cette dernière est utilisé par le serveur et le client pour communiquer. Ainsi, lorsqu'un client souhaite charger une page web, il enverra une requête GET qui contient l'adresse URL de la page souhaitée. Si cette derniere correspond à une route défini par moi (le dev expert), le serveur lui répondra.
-
-Node.js comprote plusieurs fonctions qui permettent de créer des réponses. La plus basique est send() qui renvoie au client la chaine de texte qui lui est passée en paramètre.
-
-La création d'une route passe ici par l'appel de la méthode get(). 
-Cette dernière prend 2 paramètres. Le 1er est l'endroit où arriveront les requêtes
+Distribuer des fichier statiques
+lorqu'une page web est demandée par un client, ce dernier émet une requête GET. 
+Si la page comporte des éléments externes, comme des images, des vidéos ou des scripts,
+ le client envoie au serveur autant de requete Get que nécessaires pour les charger. 
+ Ainsi, une page web avec deux images nécessiterait l'envoi de trois requete GET pour 
+ être chargée et affichée. Ces fichier qui doivent ëtre chargé portent le nom de fichiers 
+ statiques, pour les différencier des fichiers qui sont crées par le serveur à la demande
+  du client. Une première approche pour les rendre accessible consisterait à créer une 
+route GET par fichier statique. Pour rependre l'exemple précédent, nous allons créer une
+ application qui affiche une page web avec deux image qui sont placées dans un dossier img.
 
 
 
