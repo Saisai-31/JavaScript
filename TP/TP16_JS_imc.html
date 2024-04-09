@@ -8,23 +8,28 @@
 </head>
 <body>
     <div id="imc">
-    <h3>Calcaul de l'IMC</h3>
-    <input type="text" placeholder="Votre poids en kilogramme" id="kilo">
-    <input type="text" placeholder="Votre taille en mètre" id="taille">
-    <input type="button" value="Calcul de votre IMC" onclick="imc()" id="but">
-    <input type="text" id="res" placeholder="Votre IMC">
-    <p id="phrase"></p>
+        <h3>Calcaul de l'IMC</h3>
+        <input type="text" placeholder="Votre poids en kilogramme" id="kilo">
+        <input type="text" placeholder="Votre taille en mètre" id="taille">
+        <input type="button" value="Calcul de votre IMC" onclick="imc()" id="but">
+        <input type="text" id="res" placeholder="Votre IMC">
+        <p id="phrase"></p>
     </div>
 
     <script>     
+        // Dédinition de la fonction JavaScript nommée imc() qui sera appelée lorsqu'un utilisateur cliquera sur le bouton "Calcul de votre IMC".
         function imc(){
+            // Cette ligne récupère la valeur saisie dans l'élément avec l'ID "kilo" (champ de saisie de poids) et l'assigne à la variable p.
             p = document.getElementById("kilo").value;
+            // Cette ligne récupère la valeur saisie dans l'élément avec l'ID "taille" (champ de saisie de taille) et l'assigne à la variable t.
             t = document.getElementById("taille").value;
+            // Cette ligne calcule l'IMC en divisant le poids (p) par le carré de la taille (t*t) et stocke le résultat dans la variable result.
             result = p/(t*t);
             document.getElementById("res").value = result;
+
+            //Les blocs if...else if...else suivants évaluent la valeur de l'IMC (result) et affichent un message approprié dans l'élément avec l'ID "phrase", ainsi qu'une couleur de texte correspondante.
             if(p == 0 || t == 0|| isNaN(result)){
-                document.getElementById("phrase").textContent="Veillez enter un nombre et supérieur à 0";
-                
+                document.getElementById("phrase").textContent="Veillez enter un nombre et supérieur à 0";      
             }else if(result< 19){
                 document.getElementById("phrase").textContent="Vous êtes maigre";
                 document.getElementById("phrase").style.color="blue";

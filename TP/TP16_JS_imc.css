@@ -45,3 +45,23 @@ input{
 #phrase{
     font-size: larger;
 }
+
+/* Media query pour les écrans de taille inférieure à 800px */
+@media screen and (max-width: 800px) {
+   
+    #but {
+        padding: 5px;
+        white-space: wrap;
+    }
+    #kilo::placeholder, #taille::placeholder {
+        white-space: wrap;
+        padding-top: 0;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        width: 80%;
+    }
+}
+
